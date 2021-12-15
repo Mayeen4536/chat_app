@@ -1,8 +1,33 @@
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   static const id = 'login_screen';
   const LoginScreen({ Key? key }) : super(key: key);
+
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation animation;
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(
+      duration: Duration(seconds: 2),
+      vsync: this,
+      
+    );
+    animation = CurvedAnimation(parent: controller, curve: Curves.bounceOut);
+    controller.forward();
+    controller.addListener(() {
+      setState(() {});
+      print(animation.value);
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +48,10 @@ class LoginScreen extends StatelessWidget {
               Hero(
                 tag: 'logo',
                 child: Container(
-                  alignment: Alignment.center,
+                  
                   child: Icon(
                     Icons.chat,
-                    size: 70,
+                    size: animation.value * 120,
                   ),
                 ),
               ),

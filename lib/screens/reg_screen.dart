@@ -3,9 +3,34 @@ import 'package:flutter/material.dart';
 import 'login_screen.dart';
 
 // ignore: camel_case_types
-class Registration extends StatelessWidget {
+class Registration extends StatefulWidget {
   static const id = 'reg_screen';
   const Registration({ Key? key }) : super(key: key);
+
+  @override
+  _RegistrationState createState() => _RegistrationState();
+}
+
+class _RegistrationState extends State<Registration> with SingleTickerProviderStateMixin {
+  late AnimationController controller;
+  late Animation animation;
+  @override
+  void initState() {
+    super.initState();
+
+    controller = AnimationController(
+      duration: Duration(seconds: 2),
+      vsync: this,
+      
+    );
+    animation = CurvedAnimation(parent: controller, curve: Curves.bounceOut);
+    controller.forward();
+    controller.addListener(() {
+      setState(() {});
+      print(animation.value);
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,10 +51,10 @@ class Registration extends StatelessWidget {
               Hero(
                 tag: 'logo',
                 child: Container(
-                  alignment: Alignment.center,
+                  
                   child: Icon(
                     Icons.chat,
-                    size: 70,
+                    size: animation.value * 120,
                   ),
                 ),
               ),
