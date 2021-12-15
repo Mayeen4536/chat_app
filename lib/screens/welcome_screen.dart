@@ -16,10 +16,13 @@ class WelcomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              child: Icon(
-                Icons.chat,
-                size: 70,
+            Hero(
+              tag: 'logo',
+              child: Container(
+                child: Icon(
+                  Icons.chat,
+                  size: 40,
+                ),
               ),
             ),
             SizedBox(
