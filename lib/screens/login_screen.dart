@@ -24,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
     controller.forward();
     controller.addListener(() {
       setState(() {});
-      print(animation.value);
+      // print(animation.value);
     });
   }
 
@@ -78,6 +78,8 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 borderRadius: BorderRadius.circular(20),
                 textStyle: TextStyle(color: Colors.black87),
                 child: TextField(
+                  style: TextStyle(color: Colors.black87),
+                  keyboardType: TextInputType.emailAddress,
                   onChanged: (value) {
           
                   },
@@ -96,6 +98,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                 borderRadius: BorderRadius.circular(20),
                 textStyle: TextStyle(color: Colors.black87),
                 child: TextField(
+                  style: TextStyle(color: Colors.black87),
                   onChanged: (value) {
           
                   },

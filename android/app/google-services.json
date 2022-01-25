@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "263287577992",
+    "project_id": "chatapp-59812",
+    "storage_bucket": "chatapp-59812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263287577992:android:41a66b29e3749a62aaae3d",
+        "android_client_info": {
+          "package_name": "com.yeenshere.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263287577992-0bhqv77k2m9v0f6rp70jmevo9nenpjh8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQzfE-ENI7RGkantXShcpMylAKyYIDB3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263287577992-0bhqv77k2m9v0f6rp70jmevo9nenpjh8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
