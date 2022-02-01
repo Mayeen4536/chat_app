@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:chat_app/screens/chat_screen.dart';
 import 'package:chat_app/screens/login_screen.dart';
 import 'package:chat_app/screens/reg_screen.dart';
