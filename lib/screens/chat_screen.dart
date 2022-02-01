@@ -1,3 +1,4 @@
+
 import 'package:chat_app/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -34,6 +35,19 @@ class _ChatScreenState extends State<ChatScreen> {
       print(e);
     }
   }
+
+  // void getMessages() async {
+  //   final messages = await _firestore.collection('messages').get();
+  //   for (var message in messages)
+  // }
+
+  // void messagesStream() async {
+  //   await for (var snapshot in _firestore.collection('messages').snapshots()) {
+  //     for (var message in snapshot.docChanges) {
+  //       print(message.toString());
+  //     }
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
