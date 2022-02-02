@@ -57,7 +57,7 @@ class _RegistrationState extends State<Registration>
                   child: Container(
                     child: Icon(
                       Icons.chat,
-                      size: animation.value * 120,
+                      size: animation.value * 80,
                     ),
                   ),
                 ),
